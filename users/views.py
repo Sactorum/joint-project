@@ -20,7 +20,7 @@ def redirect_view(request):
         response = redirect('operaris-notificacions')
     elif request.user.groups.filter(name='Tecnic').exists():
         response = redirect('tecnics-notificacions')
-    elif request.user.groups.filter(name='Ceo').exists():
+    elif request.user.groups.filter(name='CEO').exists():
         response = redirect('ceo-home')
     else:
         raise PermissionDenied()
